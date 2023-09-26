@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TestProject</title>
+    <title>Devsu Lab</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,9 +11,29 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+  <body class='flex flex-col min-h-screen'>
+    <header class="bg-blue-950 p-5">
+      <a href='/'>
+        <p class='text-white text-2xl font-semibold'>Devsu Lab</p>
+      </a>
+    </header>
+
+    <section class='flex grow'>
+      <nav class='bg-stone-600 p-6'>
+        <p class='text-white text-xl font-semibold mb-3'>
+          List books:
+        </p>
+
+        <ul class='text-gray-200 leading-5 flex flex-col gap-2'>
+          <li><a href='/authors'>By Author</a></li>
+          <li><a href='/books'>By Name</a></li>
+        </ul>
+      </nav>
+
+      <main class="container mx-auto mt-28 px-5 flex">
+        <%= yield %>
+      </main>
+    </section>
+
   </body>
 </html>
