@@ -26,7 +26,7 @@ development:
   database: test_project_development
 
   username: william
-  password: 5463
+  password: devsu-lab
   host: localhost
   port: 5432
 
@@ -35,7 +35,7 @@ test:
   database: test_project_test
 
   username: william
-  password: 5463
+  password: devsu-lab
   host: localhost
   port: 5432
 
