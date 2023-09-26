@@ -21,14 +21,17 @@
     <%= form.number_field :pages, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
-  <div class="my-5">
-    <%= form.label :readed_pages %>
-    <%= form.number_field :readed_pages, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
-  </div>
+  <% if params[:controller] == 'books' && params[:action] == 'update' %>
+    <div class="my-5">
+      <%= form.label :readed_pages %>
+      <%= form.number_field :readed_pages, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    </div>
+  <% end %>
 
   <div class="my-5">
     <%= form.label :author_id %>
-    <%= form.text_field :author_id, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
+    <br>
+    <%= form.collection_select :author_id, Author.order(:last_name), :id, :full_name, class: "block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="inline">

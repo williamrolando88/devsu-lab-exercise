@@ -6,6 +6,10 @@
 
     <%= render @author %>
 
+    <% @author_books.each do |book| %>
+      <%= render 'books/book', book: book %>
+    <% end %>
+
     <%= link_to 'Edit this author', edit_author_path(@author), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">
       <%= button_to 'Destroy this author', author_path(@author), method: :delete, class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 font-medium" %>
