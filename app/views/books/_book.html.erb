@@ -6,7 +6,7 @@
       <%= book.name %>
     </p>
 
-    <% if params[:controller] == 'books' %>
+    <% if controller_name == 'books' %>
       <p class="my-5">
         <strong class="block font-medium mb-1">Author:</strong>
         <%= book.author.full_name %>
