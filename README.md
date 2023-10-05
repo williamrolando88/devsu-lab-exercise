@@ -64,7 +64,7 @@ rails g controller bookshelf index
 
 - Agregar pagina de inicio
 ```
-root 'bookshelf#index', as: 'bookshelf'
+root 'bookshelf#index'
 ```
 
 - Modificar views/layouts/application.html.erb
@@ -84,7 +84,7 @@ root 'bookshelf#index', as: 'bookshelf'
 
   <body class='flex flex-col min-h-screen'>
     <header class="bg-blue-950 p-5">
-      <%= link_to 'Devsu Lab', bookshelf_path, class:'text-white text-2xl font-semibold' %>
+      <%= link_to 'Devsu Lab', root_path, class:'text-white text-2xl font-semibold' %>
     </header>
 
     <section class='flex grow'>

@@ -13,9 +13,7 @@
 
   <body class='flex flex-col min-h-screen'>
     <header class="bg-blue-950 p-5">
-      <a href='/'>
-        <p class='text-white text-2xl font-semibold'>Devsu Lab</p>
-      </a>
+      <%= link_to 'Devsu Lab', root_path, class:'text-white text-2xl font-semibold' %>
     </header>
 
     <section class='flex grow'>
@@ -25,8 +23,12 @@
         </p>
 
         <ul class='text-gray-200 leading-5 flex flex-col gap-2'>
-          <li><a href='/authors'>By Author Name</a></li>
-          <li><a href='/books'>By Book Name</a></li>
+          <li>
+            <%= link_to 'By Author Name', authors_path %>
+          </li>
+          <li>
+            <%= link_to 'By Book Name', books_path %>
+          </li>
         </ul>
       </nav>
 
